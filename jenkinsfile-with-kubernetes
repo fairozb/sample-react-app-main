@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    IMAGE_REPO = 'sufibaba6629/sufiprofile-reactapp'
+    IMAGE_REPO = 'fairozb11/reactapp-using-pipeline'
     IMAGE_TAG  = "${IMAGE_REPO}:${BUILD_NUMBER}"
     LATEST_TAG = "${IMAGE_REPO}:latest"
     K8S_DEPLOYMENT = "nginx-profile-deployment"
@@ -18,7 +18,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git url: 'https://github.com/sufyanahmadkamboh/sample-react-app.git', branch: 'main'
+        git url: 'https://github.com/fairozb/sample-react-app-main.git', branch: 'main'
         sh 'ls -ltr'
       }
     }
