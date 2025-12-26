@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'sufibaba6629/sufiprofile-reactapp'
+        IMAGE_NAME = 'fairozb11/reactapp-using-pipeline'
         IMAGE_TAG  = "${IMAGE_NAME}:${BUILD_NUMBER}"
         Container  = "sufi-profile"
     }
@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/sufyanahmadkamboh/sample-react-app.git', branch: 'main'
+                git url: 'https://github.com/fairozb/sample-react-app-main.git', branch: 'main'
                 sh 'ls -ltr'
             }
         }
